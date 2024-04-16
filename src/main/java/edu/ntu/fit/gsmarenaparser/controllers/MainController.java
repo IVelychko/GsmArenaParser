@@ -55,7 +55,7 @@ public class MainController {
             ParsedProductData parsedContent = parser.parse(urlInput);
             String parsedDataJson = serializer.serializeToJson(parsedContent);
             HttpSession session = request.getSession();
-            session.setAttribute(STR."parsedContent\{parsedContentCounter++}", parsedDataJson);
+            session.setAttribute("parsedContent" + parsedContentCounter++, parsedDataJson);
         }
         catch (IOException | IllegalArgumentException e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Parsing failed: Unable to parse the content.");

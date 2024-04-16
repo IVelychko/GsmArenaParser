@@ -34,7 +34,7 @@ public class ExcelWriterService {
 
     private void writeToExcel(List<ParsedProductData> parsedDataList, Workbook workbook) {
         for (int i = 0; i < parsedDataList.size(); i++) {
-            createPage(workbook, parsedDataList.get(i), STR."Device Specs \{i + 1}");
+            createPage(workbook, parsedDataList.get(i), "Device Specs " + (i + 1));
         }
     }
 
